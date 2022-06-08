@@ -1,0 +1,231 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,input,textarea,select,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    font-family: 'Roboto', sans-serif;
+    max-width:100%;
+    max-height:100%;
+}
+
+body {
+    position: relative;
+    
+}
+
+
+
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:2;
+    /* border:1px solid blue; */
+    transition: black 0.5s;
+}
+
+.nav-mobile{
+    display:none;
+}
+
+.nav-desktop{
+    /* background-color: yellow; */
+    height:inherit;
+    text-align: right;
+}
+
+.nav-desktop li{
+    display:inline;
+    display:inline-block;
+    box-sizing: border-box;
+}
+
+.nav-desktop h2{
+    float:left;
+    line-height:70px;
+    text-transform: uppercase;
+    font-size:2.5em;
+    font-weight:bold;
+    color: whitesmoke;
+    padding:0 9vw;
+    cursor:pointer;
+}
+
+.nav-desktop a{
+    text-decoration: none;
+    color:whitesmoke;
+    line-height:70px;
+    text-transform: uppercase;
+    padding:25px 90px 25px;
+    box-sizing: border-box;
+}
+
+.nav-desktop a:hover{
+    border-bottom: 2px solid yellowgreen;
+}
+
+
+.container{
+    width:100%;
+    margin:0 auto;
+    position:relative;
+}
+
+header:hover{
+    background-color: rgba(21, 37, 61, 0.7);
+}
+
+
+ .banner{
+    height:73vh;
+    width:100vw;
+    max-width:100%;
+    position:relative;
+    background-color: black;
+
+ }
+
+
+
+  .banner > figure {
+    animation: imageFadeSlideshow 24s linear infinite 0s;
+    backface-visibility: hidden;
+    background-size: cover;
+    background-position: center center;
+    color: transparent;
+    height: inherit;
+    width: inherit;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+  }
+  
+  .banner > figure:nth-child(1) { background-image: url('./img/Banner1.jpg'); }
+  
+  .banner > figure:nth-child(2) {
+    animation-delay: 6s;
+    background-image: url('./img/Banner2.jpg');
+  }
+  
+  .banner > figure:nth-child(3) {
+    animation-delay: 12s;
+    background-image: url('./img/Banner3.jpg');
+  }
+  
+  .banner > figure:nth-child(4) {
+    animation-delay: 18s;
+    background-image: url('./img/Banner4.jpg');
+  }
+  
+
+
+
+
+@keyframes imageFadeSlideshow { 
+   0% {animation-timing-function: ease-in; opacity: 0;}
+   8% {animation-timing-function: ease-out; opacity: 1;}
+   17% {opacity: 1}
+   35% {opacity: 0}
+   100% {opacity: 0}
+  }
+
+
+  .intro{
+    border:2px solid yellow;
+    position: relative;
+    height:30vh;
+    width:15vw;
+    margin:5vh auto;
+}
+
+.intro img{
+    height:100%;
+    width:inherit;
+    object-fit: cover;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.Apresentation{
+    position:relative;
+    justify-content: center;
+    justify-items: center;
+    border:2px solid yellow;
+    width:90vw;
+    height:60vh;
+    margin:0 auto;
+    border-radius: 10px;
+}
+
+.Apresentation-box1{
+    background-color: #15263e;
+    position: relative;
+    overflow:hidden !important;
+    border:1px solid black;
+    width:inherit;
+    height:45%;
+    border-radius: 10px;
+}
+
+.Apresentation-Link{
+    color:yellowgreen;
+}
+
+.Apresentation-box1 > p{
+    float:left;
+    text-align:center;    
+    width:70%;
+    margin:2vh 4vw;
+    border:1px solid green;
+    color:whitesmoke;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.Apresentation-box1 > img{
+    float:right;
+    width:20%;
+    height:100%;
+}
+
+.Apresentation-box2 {
+    border:2px solid purple;
+    background-color: #15263e;
+    position:relative;
+    overflow:hidden !important;
+    width:inherit;
+    height:45%;
+    border-radius: 10px;
+    margin-top: 9vh;
+}
+
+.Apresentation-box2 > p{
+    float:left;
+    text-align:center;    
+    width:70%;
+    margin:2vh 4vw;
+    border:1px solid green;
+    color:whitesmoke;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.Apresentation-box2 > img{
+    float:right;
+    width:20%;
+    height:100%;
+}
