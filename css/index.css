@@ -1,0 +1,256 @@
+body{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+}
+
+
+
+header{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    height:65px;
+    transition: black 0.5s;
+    box-sizing: border-box;
+    color:whitesmoke;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-size:40px;
+    z-index: 2;
+}
+
+header:hover{
+    background-color: rgba(21, 37, 61, 0.7);
+}
+
+
+header > .Header-Title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5vw;
+    height:100%;
+    width:50%;
+}
+
+header > .Header-Title > span{
+    cursor: pointer;
+}
+
+header > .Header-Nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height:100%;
+    flex:1;
+}
+
+header > .Header-Nav > .Guide,.Landmarks,.About{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
+    width:31%;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+header > .Header-Nav > .Guide:hover,.Landmarks:hover,.About:hover{
+    border-bottom: 3px solid yellowgreen;
+}
+
+
+
+
+
+
+
+
+/* BANNER SLIDESHOW ################################################################################ */
+
+.Banner{
+    position: relative;
+    width:100%;
+    height:68vh;
+    min-height:200px;
+    background-color: black;
+    overflow: hidden;
+}
+
+.Banner > figure {
+    position: absolute;
+    animation: imageFadeSlideshow 24s linear infinite 0s;
+    backface-visibility: hidden;
+    background-size: cover;
+    background-position: center center;
+    color: transparent;
+    height: inherit;
+    width: inherit;
+    opacity: 0;
+    margin: 0;
+}
+
+.Banner > figure:nth-child(1) { 
+    background-image: url('../img/Banner1.jpg'); 
+}
+
+.Banner > figure:nth-child(2) {
+    animation-delay: 6s;
+    background-image: url('../img/Banner2.jpg');
+}
+
+.Banner > figure:nth-child(3) {
+    animation-delay: 12s;
+    background-image: url('../img/Banner3.jpg');
+}
+
+.Banner > figure:nth-child(4) {
+    animation-delay: 18s;
+    background-image: url('../img/Banner4.jpg');
+}
+
+@keyframes imageFadeSlideshow { 
+    0% {animation-timing-function: ease-in; opacity: 0;}
+    8% {animation-timing-function: ease-out; opacity: 1;}
+    17% {opacity: 1}
+    35% {opacity: 0}
+    100% {opacity: 0}
+}
+
+.Apresentation-Container{
+    position: relative;
+    width:100%;
+    height:1300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /*
+    border:1px solid yellow;
+    */
+}
+
+.Top-Foto-Container{
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width:100%;
+    height:400px;
+    overflow: hidden;
+    /*
+    border:1px solid black;
+    */
+}
+
+.Top-Foto-Around-Container{
+    width:330px;
+    height:80%;
+    background-image: url("../img/Intro.jpg");
+    background-position: center center;
+    background-size: cover;
+    border-radius: 50%;
+    border:1px solid black;
+    z-index: 2;
+    margin-bottom: 18px;
+    /*
+    border:2px solid yellowgreen;
+    */
+}
+
+.Oval-Bottom{
+    overflow: hidden;
+    top:62%;
+    position: absolute;
+    width:85%;
+    height:560px;
+    border-radius: 50%;
+    background-color: #15263e;
+    /*
+    border: 3px solid yellowgreen;
+    */
+}
+
+.Apresentation-Boxes-Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:630px;
+    /*
+    border:1px solid black;
+    */
+}
+
+.Apresentation-Link{
+    color:yellowgreen;
+}
+
+/* BOX 1 */
+.Apresentation-Box{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 10px;
+
+    width:85%;
+    height:320px;
+    border-radius: 10px;
+    overflow: hidden;
+    /*
+    border:1px solid red;
+    */
+}
+
+.Box-Text{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    background-color: #15263e;
+    width:76%;
+    /*
+    border: 1px solid yellow;
+    */
+}
+
+.Box-Text > p{
+    line-height: 37px;
+    height: 88%;
+    width:95%;
+    font-family: 'Lato', sans-serif;
+    color: whitesmoke;
+    /*
+    border: 1px solid black;
+    */
+}
+
+.Apresentation-Box:nth-child(2) > .Box-Text > p{
+    line-height: 33px;
+}
+
+.Box-Foto{
+    flex:1;
+    background-color: black;
+    background-position: center center;
+    background-size: cover;
+    /*
+    border: 1px solid black;
+    */
+}
+
+.Apresentation-Box:nth-child(1) > .Box-Foto{
+    background-image: url("../img/box2.jpg");
+}
+
+.Apresentation-Box:nth-child(2) > .Box-Foto{
+    background-image: url("../img/box5.jpg");
+}
